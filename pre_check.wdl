@@ -1,4 +1,4 @@
-workflow PairedRnaSeqAndDgeWorkflow {
+workflow HisatPairedRnaSeqAndDgeWorkflow {
     Array[File] r1_files
     Array[File] r2_files
     File sample_annotations

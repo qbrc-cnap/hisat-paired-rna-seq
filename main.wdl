@@ -7,7 +7,7 @@ import "figures.wdl" as figures
 import "report.wdl" as reporting
 
 
-workflow PairedRnaSeqAndDgeWorkflow{
+workflow HisatPairedRnaSeqAndDgeWorkflow{
     # This workflow is a 'super' workflow that parallelizes
     # RNA-seq analysis over multiple samples
 

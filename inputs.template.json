@@ -1,15 +1,15 @@
 {
-  "PairedRnaSeqAndDgeWorkflow.r2_files": "Array[File]",
-  "PairedRnaSeqAndDgeWorkflow.output_zip_name": "String",
-  "PairedRnaSeqAndDgeWorkflow.git_commit_hash": "String",
-  "PairedRnaSeqAndDgeWorkflow.experimental_conditions": "Array[String]",
-  "PairedRnaSeqAndDgeWorkflow.genome": "String",
-  "PairedRnaSeqAndDgeWorkflow.git_repo_url": "String",
-  "PairedRnaSeqAndDgeWorkflow.base_conditions": "Array[String]",
-  "PairedRnaSeqAndDgeWorkflow.gtf": "File",
-  "PairedRnaSeqAndDgeWorkflow.sample_annotations": "File",
-  "PairedRnaSeqAndDgeWorkflow.bed_annotations": "File",
-  "PairedRnaSeqAndDgeWorkflow.r1_files": "Array[File]",
-  "PairedRnaSeqAndDgeWorkflow.hisat_index_path": "File"
+  "HisatPairedRnaSeqAndDgeWorkflow.r2_files": "Array[File]",
+  "HisatPairedRnaSeqAndDgeWorkflow.output_zip_name": "String",
+  "HisatPairedRnaSeqAndDgeWorkflow.git_commit_hash": "String",
+  "HisatPairedRnaSeqAndDgeWorkflow.experimental_conditions": "Array[String]",
+  "HisatPairedRnaSeqAndDgeWorkflow.genome": "String",
+  "HisatPairedRnaSeqAndDgeWorkflow.git_repo_url": "String",
+  "HisatPairedRnaSeqAndDgeWorkflow.base_conditions": "Array[String]",
+  "HisatPairedRnaSeqAndDgeWorkflow.gtf": "File",
+  "HisatPairedRnaSeqAndDgeWorkflow.sample_annotations": "File",
+  "HisatPairedRnaSeqAndDgeWorkflow.bed_annotations": "File",
+  "HisatPairedRnaSeqAndDgeWorkflow.r1_files": "Array[File]",
+  "HisatPairedRnaSeqAndDgeWorkflow.hisat_index_path": "File"
 }
 

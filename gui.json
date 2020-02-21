@@ -2,7 +2,7 @@
 	"input_elements": [
 		{
 			"target": {
-				"target_ids": ["PairedRnaSeqAndDgeWorkflow.r1_files", "PairedRnaSeqAndDgeWorkflow.r2_files"],
+				"target_ids": ["HisatPairedRnaSeqAndDgeWorkflow.r1_files", "HisatPairedRnaSeqAndDgeWorkflow.r2_files"],
 				"name": "input_files",
 				"handler": "input_mapping.py"
 			},
@@ -16,7 +16,7 @@
 		},
 		{
 			"target": {
-				"target_ids": ["PairedRnaSeqAndDgeWorkflow.sample_annotations"],
+				"target_ids": ["HisatPairedRnaSeqAndDgeWorkflow.sample_annotations"],
 				"name": "annotations_input",
 				"handler": "single_file_input_mapping.py"
 			},
@@ -30,10 +30,10 @@
 		},
 		{
 			"target": {
-				"target_ids": ["PairedRnaSeqAndDgeWorkflow.genome", 
-					"PairedRnaSeqAndDgeWorkflow.hisat_index_path", 
-					"PairedRnaSeqAndDgeWorkflow.gtf",
-					"PairedRnaSeqAndDgeWorkflow.bed_annotations"
+				"target_ids": ["HisatPairedRnaSeqAndDgeWorkflow.genome", 
+					"HisatPairedRnaSeqAndDgeWorkflow.hisat_index_path", 
+					"HisatPairedRnaSeqAndDgeWorkflow.gtf",
+					"HisatPairedRnaSeqAndDgeWorkflow.bed_annotations"
 				],
 				"name": "genome_choice",
 				"handler": "genome_mapper.py"
@@ -57,8 +57,8 @@
 		{
 			"target": {
 				"target_ids": [
-					"PairedRnaSeqAndDgeWorkflow.base_conditions", 
-					"PairedRnaSeqAndDgeWorkflow.experimental_conditions"
+					"HisatPairedRnaSeqAndDgeWorkflow.base_conditions", 
+					"HisatPairedRnaSeqAndDgeWorkflow.experimental_conditions"
 				],
 				"name": "contrast_grid",
 				"handler": "condition_mapper.py"
@@ -71,7 +71,7 @@
 			}
 		},
 		{
-			"target":"PairedRnaSeqAndDgeWorkflow.output_zip_name",
+			"target":"HisatPairedRnaSeqAndDgeWorkflow.output_zip_name",
 			"display_element": {
 				"type": "text",
 				"label": "Output zip-archive name:",
@@ -79,7 +79,7 @@
 			}
 		},
 		{
-			"target": "PairedRnaSeqAndDgeWorkflow.git_repo_url",
+			"target": "HisatPairedRnaSeqAndDgeWorkflow.git_repo_url",
 			"display_element": {
 				"type": "dynamic_hidden",
 				"handler": "add_git_repo_url.py",
@@ -89,7 +89,7 @@
 			}
 		},
 		{
-			"target": "PairedRnaSeqAndDgeWorkflow.git_commit_hash",
+			"target": "HisatPairedRnaSeqAndDgeWorkflow.git_commit_hash",
 			"display_element": {
 				"type": "dynamic_hidden",
 				"handler": "add_git_hash.py",
