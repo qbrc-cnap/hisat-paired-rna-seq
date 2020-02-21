@@ -1,0 +1,12 @@
+{
+    "Ensembl Homo sapiens GRCh38.95":{
+        "hisat_index": "",
+        "gtf": "gs://cnap-hsph-resources/grch38.95/Homo_sapiens.GRCh38.95.gtf",
+        "bed_annotations": "gs://cnap-hsph-resources/grch38.95/grch38.95.bed12_annotations.bed"
+    },
+    "Ensembl Mus musculus GRCm38.95":{
+        "hisat_index": "",
+        "gtf": "gs://cnap-hsph-resources/grcm38.95/Mus_musculus.GRCm38.95.gtf",
+        "bed_annotations": "gs://cnap-hsph-resources/grcm38.95/grcm38.95.bed12_annotations.bed"
+    }
+}

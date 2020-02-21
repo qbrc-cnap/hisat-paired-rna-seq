@@ -1,0 +1,23 @@
+To construct the index, followed the instructions at the HISAT2 site.  Below is the full list of commands
+used to construct the index:
+
+# get the reference fasta and GTF from our google storage
+gsutil cp gs://cnap-hsph-resources/grch38.95/Homo_sapiens.GRCh38.dna.primary_assembly.fa .
+gsutil cp gs://cnap-hsph-resources/grch38.95/Homo_sapiens.GRCh38.95.gtf .
+
+# use the HISAT scripts to extract splice sites and exons
+/opt/software/hisat2-2.2.0/hisat2_extract_splice_sites.py Homo_sapiens.GRCh38.95.gtf > Homo_sapiens.GRCh38.95.ss
+/opt/software/hisat2-2.2.0/hisat2_extract_exons.py Homo_sapiens.GRCh38.95.gtf > Homo_sapiens.GRCh38.95.exon
+
+# get db snp, uncompress and reformat to be compatible with HISAT2
+wget http://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/snp144Common.txt.gz
+gzip -d snp144Common.txt.gz
+awk 'BEGIN{OFS="\t"} {if($2 ~ /^chr/) {$2 = substr($2, 4)}; if($2 == "M") {$2 = "MT"} print}' snp144Common.txt > snp144Common.txt.ensembl
+/opt/software/hisat2-2.2.0/hisat2_extract_snps_haplotypes_UCSC.py Homo_sapiens.GRCh38.dna.primary_assembly.fa snp144Common.txt.ensembl Homo_sapiens.GRCh38.95
+
+# finally, build the index:
+/opt/software/hisat2-2.2.0/hisat2-build -p 16 \
+  --snp Homo_sapiens.GRCh38.95.snp \
+  --haplotype Homo_sapiens.GRCh38.95.haplotype \
+  --exon Homo_sapiens.GRCh38.95.exon \
+  --ss Homo_sapiens.GRCh38.95.ss Homo_sapiens.GRCh38.dna.primary_assembly.fa Homo_sapiens.GRCh38.95_snp_tran
